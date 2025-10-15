@@ -12,21 +12,19 @@ def print_pack_report(cake_count):
     
     Returns:
         str: Сообщение о фасовке
-            f"{cake_count} - расфасуем по 3 или по 5"
-            f"{cake_count} - расфасуем по 3"
-            f"{cake_count} - расфасуем по 5"
-            f"{cake_count} - не заказываем!"
+            f"{temp_cake_count} - расфасуем по 3 или по 5"
+            f"{temp_cake_count} - расфасуем по 3"
+            f"{temp_cake_count} - расфасуем по 5"
+            f"{temp_cake_count} - не заказываем!"
             "У вас нет пирожных"
     """
-    if  cake_count > 1:
-        if cake_count % 3 == 0 and cake_count % 5 == 0:
-            return f"{cake_count} - расфасуем по 3 или по 5"
-        elif cake_count % 3 == 0:
-            return f"{cake_count} - расфасуем по 3"
-        elif cake_count % 5 == 0:
-            return f"{cake_count} - расфасуем по 5"
-        else: return f"{cake_count} - не заказываем!"
-    else:
-        return "У вас нет пирожных"
 
-
+    for temp_cake_count in range(cake_count, 0, -1):
+        if temp_cake_count % 3 == 0 and temp_cake_count % 5 == 0:
+            print(f"{temp_cake_count} - расфасуем по 3 или по 5")
+        elif temp_cake_count % 3 == 0:
+            print(f"{temp_cake_count} - расфасуем по 3")
+        elif temp_cake_count % 5 == 0:
+            print(f"{temp_cake_count} - расфасуем по 5")
+        else:
+            print(f"{temp_cake_count} - не заказываем!")
