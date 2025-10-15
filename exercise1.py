@@ -33,7 +33,7 @@ def transform(letter, step):
         else: 
             return chr(letter_code + step - 1071 + 1039)
     
-    # Если символ не является буквой, то она остается прежней
+    # Если символ не является буквой, то он остается прежним
     return letter
 
 def lang_detect(letter):
